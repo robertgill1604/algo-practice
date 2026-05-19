@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+#include <stdlib.h>
 #define MAX 10
 int q[MAX];
 //int g[MAX][MAX];
@@ -33,7 +33,7 @@ void bfs(int**g,int s,int n){
 }
 int main(){
 	int **t,n,i,j;
-	clrscr();
+	
 	scanf("%d",&n);
 	t=(int **)malloc(n*sizeof(int*));
 	for(i=0;i<n;i++){
@@ -45,16 +45,9 @@ int main(){
 		}
 	}
 	bfs(t,0,n);
-     /*	for(i=0;i<n;i++){
-		printf("%d->",&t[i]);
-		for(j=0;j<n;j++){
-			printf("%d-%d ",&t[i][j],t[i][j]);
-		}
-		printf("\n");
-	}*/
 
 	free(t);
-	getch();
+	
 	return 0;
 
 }
